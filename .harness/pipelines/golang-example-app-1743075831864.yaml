@@ -1,0 +1,33 @@
+pipeline:
+  name: Build golang-example-app
+  identifier: Build_wasptree_golang_example_app_1743075844326
+  projectIdentifier: Andy_Sutcliffe
+  orgIdentifier: default
+  stages:
+    - stage:
+        name: Build
+        identifier: Build
+        type: CI
+        spec:
+          cloneCodebase: true
+          execution:
+            steps:
+              - step:
+                  type: Run
+                  name: Echo Welcome Message
+                  identifier: Echo_Welcome_Message
+                  spec:
+                    shell: Sh
+                    command: echo "Welcome to Harness CI"
+          platform:
+            os: Linux
+            arch: Amd64
+          runtime:
+            type: Cloud
+            spec: {}
+  properties:
+    ci:
+      codebase:
+        connectorRef: account.Github
+        repoName: wasptree/golang-example-app
+        build: <+input>
