@@ -1,0 +1,14 @@
+inputSet:
+  name: Build_wasptree_golang_example_app_1743075844326-push-trigger-input-set
+  identifier: Build_wasptree_golang_example_app_1743075844326pushtriggerinputset
+  orgIdentifier: default
+  projectIdentifier: Andy_Sutcliffe
+  pipeline:
+    identifier: Build_wasptree_golang_example_app_1743075844326
+    properties:
+      ci:
+        codebase:
+          build:
+            type: branch
+            spec:
+              branch: <+trigger.branch>
